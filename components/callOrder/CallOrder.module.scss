@@ -41,6 +41,13 @@
 
 
 
+    .sendSuccess{
+      font-family: 'Noto Sans', 'sans-serif';
+      margin: 70px 0;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 36px;
+    }
 
     .title{
       font-weight: 700;
@@ -136,6 +143,7 @@
     .text{
         margin-top: 20px;
         padding: 0 20px;
+        color: var(--yellowLight)
     }
   }
 }

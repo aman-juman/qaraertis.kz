@@ -39,7 +39,9 @@ export default async function (req, res){
             if(err)
                 console.log(err)
             else
-                console.log(info)
+                console.log(info);
+            res.status(200).json({
+                message: "Mail sent successfully"})
         })
     })
 

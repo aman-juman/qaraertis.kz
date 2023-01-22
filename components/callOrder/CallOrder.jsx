@@ -15,7 +15,6 @@ const CallOrder = () => {
         control
     } = useForm();
 
-    const [phone, setPhone] = useState("");
     const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -42,7 +41,7 @@ const CallOrder = () => {
     }
 
 
-
+console.log(success)
 
     return (
         <section className={styles.section}>
@@ -53,57 +52,45 @@ const CallOrder = () => {
                     <div className={styles.content}>
                         <h5 className={styles.title}>Консультация</h5>
                         <p className={styles.subTitle}>Напишите нам и мы свяжемся с Вами в самое ближайшее время</p>
+                        {
+                            success ? <h5 className={styles.sendSuccess}>ЗАЯВКА УСПЕШНО ОТПРАВЛЕНО</h5> : <form onSubmit={handleSubmit(onHandleSubmit)} className={styles.form}>
+                                <input
+                                    name="name"
+                                    className={styles.input}
+                                    placeholder="Ваше имя"
+                                    type="text"
+                                    {...register("name", {required:true})}
+                                />
+                                <Controller
+                                    control={control}
+                                    defaultValue=""
+                                    rules={{
+                                        required: true,
+                                    }}
+                                    name="phone"
 
-                        <form onSubmit={handleSubmit(onHandleSubmit)} className={styles.form}>
-                            <input
-                                name="name"
-                                className={styles.input}
-                                placeholder="Как к Вам обращаться?"
-                                type="text"
-                                {...register("name", {required:true})}
-                            />
-                            {/*<input*/}
-                            {/*    name="phone"*/}
-                            {/*    className={styles.input}*/}
-                            {/*    placeholder="Телефон *"*/}
-                            {/*    type="number"*/}
-                            {/*    {...register("phone", {required:true})}*/}
-                            {/*/>*/}
-                            {/*<InputMask*/}
-                            {/*    mask="+7 (799) 999-99-99"*/}
-                            {/*    value={phone}*/}
-                            {/*    onChange={handleInput}*/}
-                            {/*    placeholder="+7 (7__) ___-__-__"*/}
-                            {/*>*/}
-                            {/*</InputMask>*/}
-                            <Controller
-                                control={control}
-                                defaultValue=""
-                                rules={{
-                                    required: true,
-                                }}
-                                name="phone"
+                                    render={({field}) => (
+                                        <MaskedInput
+                                            mask="+7 (799) 999-99-99"
+                                            value={field.value}
+                                            onChange={field.onChange}
+                                            placeholder="+7 (7__) ___-__-__"
+                                        >
+                                            {(inputProps) => (
+                                                <input
+                                                    {...inputProps}
+                                                    className={styles.input}
+                                                    type="text"/>
+                                            )     }
+                                        </MaskedInput>)}
+                                />
 
-                                render={({field}) => (
-                                    <MaskedInput
-                                        mask="+7 (799) 999-99-99"
-                                        value={field.value}
-                                        onChange={field.onChange}
-                                        placeholder="+7 (7__) ___-__-__"
-                                    >
-                                    {(inputProps) => (
-                                        <input
-                                            {...inputProps}
-                                            className={styles.input}
-                                            type="text"/>
-                                        )     }
-                                    </MaskedInput>)}
-                            />
-
-                            <input className={styles.submit} value="Отправить" type="submit"/>
+                                <input className={styles.submit} value="Отправить" type="submit"/>
 
 
-                        </form>
+                            </form>
+                        }
+
                         <p className={styles.text}>В рабочее время это заимет не больше 15 минут</p>
                     </div>
                 </div>
