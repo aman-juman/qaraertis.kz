@@ -94,7 +94,7 @@
 
     @include medium{
       padding: 0 10px;
-      margin-top: 70px;
+      margin-top: 50px;
     }
 
 
@@ -103,6 +103,15 @@
       font-size: 26px;
       line-height: 1.2;
       color: var(--green);
+
+      @include medium{
+        font-size: 24px;
+      }
+      @include mobile{
+        font-size: 18px;
+        text-align: center;
+        margin-top: 30px;
+      }
 
     }
 
@@ -126,7 +135,8 @@
           font-size: 28px;
         }
         @include mobile{
-          font-size: 20px;
+          font-size: 22px;
+          text-align: center;
         }
       }
       .contentDescription{
@@ -136,6 +146,11 @@
         line-height: 1.2;
         color: var(--green);
         margin-bottom: 70px;
+        @include mobile{
+          width: 100%;
+          font-size: 18px;
+          text-align: center;
+        }
       }
     }
 
@@ -148,6 +163,11 @@
         font-size: 24px;
         line-height: 1.2;
         color: var(--black);
+
+        @include mobile{
+          font-size: 18px;
+          text-align: center;
+        }
       }
       .contentBlockBottomList{
         margin-top: 20px;

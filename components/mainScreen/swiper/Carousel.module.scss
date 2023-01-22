@@ -46,6 +46,7 @@ z-index: -1;
 
             @include medium{
                 font-size: 52px;
+                letter-spacing: 0px;
             }
             @include mobile{
                 font-size: 30px;
@@ -56,6 +57,11 @@ z-index: -1;
             display: flex;
             gap: 20px;
             justify-content: flex-end;
+
+            @include mobile{
+                margin-top: 20px;
+                border-top: 3px solid var(--greenLight);
+            }
 
 
             li{
@@ -69,6 +75,7 @@ z-index: -1;
                     font-size: 16px;
                 }
                 @include mobile{
+                    font-size: 14px;
                     justify-content: center;
                 }
             }

@@ -67,6 +67,7 @@ const Carousel = () => {
                         <ul className={styles.topContentList}>
                             {animals.map((item, i) => (
                                 <li key={i}>
+
                                     {item}
                                 </li>
                             ))}

@@ -97,6 +97,10 @@
           line-height: 1.22;
           text-align: center;
           color: var(--black);
+
+          @include mobile{
+            font-size: 14px;
+          }
         }
       }
     }
