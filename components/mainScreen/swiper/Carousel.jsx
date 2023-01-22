@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {useContext, useRef, useState} from "react";
 import Image from "next/image";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,10 +17,57 @@ import Arrow from "./arrow.svg";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 import Link from "next/link";
+import {LanguageContext} from "@/pages";
 
 
-const animals = ["СКОТЫ", "ОВЦЫ", "ЛОШАДИ"]
+const animals = ["СКОТЫ", "ОВЦЫ", "ЛОШАДИ"];
+
+const dataBase = [
+    {
+        language: "ru",
+        title: "ПЛЕМЕННЫЕ",
+        products: [
+            {
+                name: "СКОТЫ",
+                idName: "cow"
+            },
+            {
+                name: "ОВЦЫ",
+                idName: "sheep"
+            },
+            {
+                name: "ЛОШАДИ",
+                idName: "horse"
+            },
+        ],
+        linkTitle: "Подробнее",
+        sinceTitle: "ОСНОВАН"
+    },
+    {
+        language: "kz",
+        title: "Асыл тұқымды",
+        products: [
+            {
+                name: "СИЫР",
+                idName: "cow"
+            },
+            {
+                name: "ҚОЙ",
+                idName: "sheep"
+            },
+            {
+                name: "ЖЫЛҚЫ",
+                idName: "horse"
+            },
+        ],
+        linkTitle: "Толығырақ",
+        sinceTitle: "ҚҰРЫЛДЫ"
+    },
+]
 const Carousel = () => {
+    const [language, setLanguage] = useContext(LanguageContext);
+    const index = dataBase.findIndex(item => item.language === language);
+    const data = dataBase[index];
     return (
         <>
             <Swiper
@@ -62,25 +109,26 @@ const Carousel = () => {
                 </SwiperSlide>
                 <div className={styles.top}>
                     <div className={styles.topContent}>
-                        <h3 className={styles.topContentTitle}>Породистые</h3>
+                        <h3 className={styles.topContentTitle}>{data.title}</h3>
 
                         <ul className={styles.topContentList}>
-                            {animals.map((item, i) => (
+                            {data.products.map((item, i) => (
                                 <li key={i}>
-
-                                    {item}
+                                    <Link href={`#${item.idName}`}>
+                                        {item.name}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
-                        <MyButton />
+                        <MyButton title={data.linkTitle} />
                     </div>
                 </div>
                 <div className={styles.bottom}>
                     <div className={styles.bottomContent}>
                         <FarmIcon />
                         <div className={styles.bottomText}>
-                           <h1>Кара Ертис</h1>
-                            <h5>основан 1996</h5>
+                           <h1>Қара Ертіс</h1>
+                            <h5>{data.sinceTitle} 1996</h5>
                         </div>
                     </div>
                 </div>
@@ -90,11 +138,11 @@ const Carousel = () => {
 };
 
 
-const MyButton = () =>{
+const MyButton = ({title}) =>{
     return(
         <Link href="https://wa.me/77058110947?text=Меня%20интересует%20породистые%20овцы/лошади/скоты">
             <div className={styles.myButton}>
-                <p>Узнать больше</p>
+                <p>{title}</p>
 
                 <div className={styles.arrowBlock}>
                     <Arrow />

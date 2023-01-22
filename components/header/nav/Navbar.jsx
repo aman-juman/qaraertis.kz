@@ -6,7 +6,8 @@ import LocationIcon from "./location.svg";
 import InstagramIcon from "./instagram.svg";
 import FacebookIcon from "./facebook.svg";
 import YoutubeIcon from "./youtube.svg";
-import {useState} from "react";
+import {useContext, useState} from "react";
+import {LanguageContext} from "@/pages";
 
 
 const menuArr = [
@@ -32,14 +33,15 @@ const menuArr = [
     },
 ]
 const Navbar = () => {
-    const [langActive, setLangActive] = useState("ru");
+
     const menu = menuArr.map(({name, href}, i) => (
         <li className={styles.menuItem} key={i}>
             <Link href={href}>{name}</Link>
         </li>
     ));
+    const [language, setLanguage] = useContext(LanguageContext);
     const changeLang = lang =>{
-        setLangActive(lang)
+        setLanguage(lang)
     }
     return (
         <nav className={styles.nav}>
@@ -70,8 +72,8 @@ const Navbar = () => {
                     {menu}
                 </ul>
                 <div className={styles.langBlock}>
-                    <div onClick={() => changeLang("kz")} className={cn(styles.langItem, {[styles.activeLang]: langActive === "kz"})}>ҚАЗ</div>
-                    <div onClick={() => changeLang("ru")} className={cn(styles.langItem, {[styles.activeLang]: langActive === "ru"})}>РУС</div>
+                    <div onClick={() => changeLang("kz")} className={cn(styles.langItem, {[styles.activeLang]: language === "kz"})}>ҚАЗ</div>
+                    <div onClick={() => changeLang("ru")} className={cn(styles.langItem, {[styles.activeLang]: language === "ru"})}>РУС</div>
                 </div>
             </div>
         </nav>

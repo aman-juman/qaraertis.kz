@@ -13,12 +13,21 @@ import Products from "@/components/products/Products";
 import CallOrder from "@/components/callOrder/CallOrder";
 import Menu from "@/components/Menu";
 import PanelBottom from "@/components/PanelBottom/PanelBottom";
+import {createContext, useState} from "react";
 
 const inter = Inter({ subsets: ['latin'] })
 
+
+const languages = [
+    "ru",
+    "kz"
+]
+export const LanguageContext = createContext(languages[0]);
 export default function Home() {
+    const [language, setLanguage] = useState(languages[0]);
+
   return (
-    <>
+    <LanguageContext.Provider value={[language, setLanguage]}>
       <Head>
         <title>Кара Ертис</title>
         <meta name="description" content="Крестьянское хозяйство" />
@@ -43,6 +52,6 @@ export default function Home() {
         <Footer />
         <PanelBottom />
 
-    </>
+    </LanguageContext.Provider>
   )
 }
