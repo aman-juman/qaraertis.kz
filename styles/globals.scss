@@ -1,0 +1,164 @@
+/*@import "screen";*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+:root {
+  --green: #164F03;
+  --white: #FFFFFF;
+  --black: #000000;
+  --greenLight: #309D09;
+  --greenExtraLight: #46866C;
+  --semiGreen: #6F9062;
+  --yellow: #D3CB0C;
+  --yellowLight: #FFED4D;
+}
+
+
+//*** START -------Bottom Call Phone----------START ***//
+.bottom-phone{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  background-color: #1bc412;
+  width: 100%;
+  height: 50px;
+  z-index: 99;
+
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+
+//@include medium{
+//  display: block;
+//}
+}
+.bottom-phone:hover{
+  background-color: #1cf912;
+}
+
+.bottom-phone a{
+  text-decoration: none;
+  color: inherit;
+}
+.bottom-phone_content{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: scale 2s infinite;
+
+}
+.bottom-phone_content *{
+  margin: 10px 0;
+}
+@keyframes scale {
+  0% {transform: scale(1)}
+  50% {transform: scale(0.97)}
+  100% {transform: scale(1)}
+}
+//*** END -------Bottom Call Phone----------END ***//
+
+.burger-menu{
+  display: none;
+@media (max-width: #{768px}) {
+  display: block;
+}
+}
+
+
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next{
+  right: 60px!important;
+}
+.swiper-button-prev{
+  left: 60px!important;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 10px 13px;
+  font-size: 14px !important;
+  font-weight: bold;
+  border-radius: 50%;
+  transition: all 0.4s ease-in;
+}
+.swiper-button-next:hover:after, .swiper-button-prev:hover:after{
+  opacity: 0.5;
+}
+

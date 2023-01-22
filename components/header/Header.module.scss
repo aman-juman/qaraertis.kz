@@ -1,0 +1,30 @@
+@import "styles/screen";
+.header{
+
+  .content{
+    display: grid;
+    grid-template-columns: 150px auto;
+    align-items: center;
+
+    @include medium{
+      grid-template-columns: 1fr;
+      justify-items: center;
+      justify-content: center;
+      //grid-auto-flow: dense;
+      //direction: rtl;
+    }
+
+    @include tablet{
+      grid-template-columns: 1fr 1fr;
+
+    }
+
+    .logo{
+
+
+      @include tablet{
+        justify-self: flex-start;
+      }
+    }
+  }
+}

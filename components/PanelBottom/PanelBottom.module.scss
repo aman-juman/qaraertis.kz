@@ -1,0 +1,55 @@
+@import "./styles/screen";
+
+.show{
+  //display: none;
+  @include tablet{
+    display: block;
+
+  }
+}
+.whatsapp{
+  display: block;
+}
+.wrap{
+  position: fixed;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 99;
+}
+.panel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 250px;
+  height: 60px;
+  padding: 0 30px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  border: 2px solid rgba(161, 159, 159, 0.4);
+
+  svg{
+    cursor: pointer;
+    animation: 2s infinite linear move;
+
+  }
+}
+@keyframes move {
+  0%{
+    transform: rotate(-10deg);
+  }
+  25%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(10deg);
+  }
+  75%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(-10deg);
+  }
+}

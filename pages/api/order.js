@@ -1,0 +1,34 @@
+
+
+
+export default function (req, res){
+    const nodemailer = require('nodemailer');
+    const transporter = nodemailer.createTransport({
+        port: 465,
+        host: "smtp.mail.ru",
+        auth: {
+            user: process.env.NEXT_PUBLIC_MAIL_USERNAME,
+            pass: process.env.NEXT_PUBLIC_MAIL_PASSWORD,
+        },
+        secure: true,
+    });
+
+    const mailData = {
+        from: process.env.NEXT_PUBLIC_MAIL_USERNAME,
+        to: process.env.NEXT_PUBLIC_MAIL_SEND_TO_USERNAME,
+        subject: `Вы получили заявку на звонок с qaraertis.kz`,
+        text: "Заявка на звонок",
+        html: `<img style="width: 100px; height: 100px" src="https://yt3.ggpht.com/ytc/AMLnZu9RPbuig4zeCn6nWDSCQlnLhtq6NtdPIDf1bzXa=s900-c-k-c0x00ffffff-no-rj"/><div>Имя: ${req.body.name}</div><p>Телефон:
+<a href="tel:${req.body.phone}">${req.body.phone}</a>
+    `
+    }
+
+    transporter.sendMail(mailData, function (err, info) {
+        if(err)
+            console.log(err)
+        else
+            console.log(info)
+    })
+    res.status(200).json({
+        message: "Mail sent successfully"})
+}
