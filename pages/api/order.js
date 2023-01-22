@@ -1,5 +1,6 @@
+import {suspense} from "next/dist/shared/lib/dynamic-no-ssr";
 
-export default function (req, res){
+export default async function (req, res){
     const nodemailer = require('nodemailer');
     const transporter = nodemailer.createTransport({
         port: 465,
@@ -11,6 +12,18 @@ export default function (req, res){
         secure: true,
     });
 
+    await new Promise((resolve, reject) =>{
+        transporter.verify(function(error, success){
+            if(error){
+                console.log(error);
+            } else{
+                console.log("Server is ready to take our messages");
+                resolve(suspense)
+            }
+        })
+    })
+
+
     const mailData = {
         from: process.env.NEXT_PUBLIC_MAIL_USERNAME,
         to: process.env.NEXT_PUBLIC_MAIL_SEND_TO_USERNAME,
@@ -21,12 +34,15 @@ export default function (req, res){
     `
     }
 
-    transporter.sendMail(mailData, function (err, info) {
-        if(err)
-            console.log(err)
-        else
-            console.log(info)
+    await new Promise((resolve, reject) =>{
+        transporter.sendMail(mailData, function (err, info) {
+            if(err)
+                console.log(err)
+            else
+                console.log(info)
+        })
     })
+
     res.status(200).json({
         message: "Mail sent successfully"})
 }
