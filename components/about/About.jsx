@@ -5,16 +5,42 @@ import img from "./img.jpeg";
 import SheepIcon from "./sheep.svg";
 import HorseIcon from "./horse.svg";
 import CowIcon from "./cow.svg";
+import {LanguageContext} from "@/pages";
+import {useContext} from "react";
 
 
 const dataBase = [
     {
+        language: "ru",
+        label: "О нас",
+        title: "Кара Ертис",
+        subTitle: "Крестьянское хозяйство племенных пород",
+        description: "Для выпаса овец лошадей и коров хозяйство располагает частным пастбищным угодием общей площадью 30.000 гектар земли расположенный вдоль реки Чёрный Иртыш и летнее пастбище в горах (жайлау) площадью 900 гектар.",
+        textLabel: "Круглогодичное пастбищное содержание",
+        text: 'В 2003 году «Кара Иртыс» построил торговый дом в Зайсане, способствуя развитию экономики района.',
+        quantities: [
+            {
+                name: "sheep",
+                count: 6000
+            },
+            {
+                name: "horse",
+                count: 1000
+            },
+            {
+                name: "cow",
+                count: 300
+            }
+        ],
+        options: "голов"
+    },
+    {
         language: "kz",
         label: "Біз туралы",
         title: "Қара Ертіс",
-        subTitle: "шаруа қожалығы",
-        description: "'Қара Ертіс' шаруа қожалығы 1996 жылы ұйымдастырды. Шығыс Қазақстан облысы Зайсан ауданында ең алғашқы болып қазақтың жартылай қылшық жүнді 'Байыс' асыл тұқымды қойларын , 'Жабы' жылқыларын  әкелді.",
-        textLabel: "Қазіргі таңда",
+        subTitle: "Асыл тұқымды шаруа қожалығы",
+        description: "Қой, жылқы және сиыр бағу үшін шаруашылықтың Қара Ертіс өзенінің бойында орналасқан жалпы ауданы 30 000 га жеке жайылымдық жері және 900 га жазғы жайлауы бар.",
+        textLabel: "Жыл бойы мал жаю",
         text: "2003 жылы Зайсан қаласына 'Қара Ертіс' сауда үйін салып,аудан экономикасын дамытуға үлесін қосып келеді.",
         quantities: [
             {
@@ -31,10 +57,12 @@ const dataBase = [
             }
         ],
         options: "бас"
-    }
+    },
 ]
 const About = () => {
-    const data = dataBase[0];
+    const [language, setLanguage] = useContext(LanguageContext);
+    const index = dataBase.findIndex(item => item.language === language);
+    const data = dataBase[index];
     const icons = [
         <SheepIcon />,
         <HorseIcon/>,
