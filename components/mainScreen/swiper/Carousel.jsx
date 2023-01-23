@@ -8,9 +8,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import styles from "./Carousel.module.scss";
-import img1 from "../background.jpeg";
-import img2 from "../background1.jpg";
-import img3 from "../background2.jpg";
+import img1 from "/public/slide1.jpeg";
+import img2 from "/public/slide2.jpeg";
+import img3 from "/public/slide3.jpeg";
+import img4 from "/public/slide4.jpeg";
 import FarmIcon from "./farmIcon.svg";
 import Arrow from "./arrow.svg";
 
@@ -90,8 +91,7 @@ const Carousel = () => {
                             alt="farm"
                             quality={80}
                             loading="lazy"
-                            src={img3} />
-
+                            src={img1} />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -102,9 +102,29 @@ const Carousel = () => {
                             alt="farm"
                             quality={80}
                             loading="lazy"
-                            src={img1} />
-
-
+                            src={img2} />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={styles.block}>
+                        <Image
+                            className={styles.img}
+                            paceholder="blur"
+                            alt="farm"
+                            quality={80}
+                            loading="lazy"
+                            src={img3} />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={styles.block}>
+                        <Image
+                            className={styles.img}
+                            paceholder="blur"
+                            alt="farm"
+                            quality={80}
+                            loading="lazy"
+                            src={img4} />
                     </div>
                 </SwiperSlide>
                 <div className={styles.top}>

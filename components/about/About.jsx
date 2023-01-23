@@ -1,7 +1,7 @@
 import styles from "./About.module.scss";
 import Image from "next/image";
 
-import img from "./img.png";
+import img from "./img.jpeg";
 import SheepIcon from "./sheep.svg";
 import HorseIcon from "./horse.svg";
 import CowIcon from "./cow.svg";

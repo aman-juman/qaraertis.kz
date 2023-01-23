@@ -1,7 +1,7 @@
 import styles from "./Products.module.scss";
 import Product from "@/components/products/product/Product";
 
-import SheepImage from "/public/sheepImg1.jpeg";
+import SheepImage from "/public/sheepImg1.png";
 import HorseImage from "/public/horseImg1.jpg";
 import CowImage from "/public/cowImg1.jpg";
 

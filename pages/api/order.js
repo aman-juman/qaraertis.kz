@@ -4,7 +4,7 @@ export default async function (req, res){
     const nodemailer = require('nodemailer');
     const transporter = nodemailer.createTransport({
         port: 465,
-        host: "smtp.mail.ru",
+        host: "smtp.gmail.com",
         auth: {
             user: process.env.NEXT_PUBLIC_MAIL_USERNAME,
             pass: process.env.NEXT_PUBLIC_MAIL_PASSWORD,
