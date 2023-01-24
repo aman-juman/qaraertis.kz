@@ -14,6 +14,7 @@ import CallOrder from "@/components/callOrder/CallOrder";
 import Menu from "@/components/Menu";
 import PanelBottom from "@/components/PanelBottom/PanelBottom";
 import {createContext, useState} from "react";
+import YoutubeBlock from "@/components/youtube/YoutubeBlock";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -47,6 +48,7 @@ export default function Home() {
       <MainScreen />
         <Products />
         <About />
+        {/*<YoutubeBlock />*/}
         <CallOrder />
         <Advantage />
         <Footer />

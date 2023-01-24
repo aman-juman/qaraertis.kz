@@ -87,6 +87,13 @@
           }
 
         }
+
+        .contentTopPrevDescription{
+          margin-top: 20px;
+          color: var(--white);
+          font-size: 20px;
+          font-weight: 600;
+        }
       }
       .contentCenter{
         font-weight: 500;
@@ -103,8 +110,11 @@
       .contentBottom{
         border-top: 2px solid var(--yellowLight);
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         padding-top: 20px;
+        gap: 0 20px;
+        text-align: center;
+
 
         @include mobile{
           grid-template-columns: 1fr;
@@ -115,7 +125,6 @@
           font-size: 28px;
           line-height: 1.2;
           color: var(--white);
-          padding-top: 10%;
 
           @include mobile{
             margin-bottom: 30px;

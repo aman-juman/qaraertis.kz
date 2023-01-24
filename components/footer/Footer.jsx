@@ -38,11 +38,9 @@ const Footer = () => {
                         <p>Наши социальные сети</p>
                         <div className={styles.socials}>
                             <a href="https://www.google.com/maps/place/FVCG%2BP5G,+Zaysan+070000/@47.4722644,84.8759043,19z/data=!4m13!1m7!3m6!1s0x42bd37bb2a54b50d:0xf98f0182ee604f5d!2z0JzQsNC70LTRi9Cx0LDQtdCyINC606nRiNC10YHRliwgWmF5c2FuIDA3MDAwMA!3b1!8m2!3d47.4718075!4d84.8749602!3m4!1s0x42bd370b29a6b9b5:0x7b8d0b271cb8db09!8m2!3d47.471784!4d84.8754856"> <Icon1/></a>
-
-                            <a href="https://wa.me/77058110947?text=Меня%20интересует%20породистые%20овцы/лошади/скоты"><Icon2/></a>
-                            <a href="https://wa.me/77058110947?text=Меня%20интересует%20породистые%20овцы/лошади/скоты"><Icon3/></a>
+                            <a href="https://wa.me/77051860084?text=Меня%20интересует%20породистые%20овцы/лошади/скоты"><Icon2/></a>
+                            <a href="https://wa.me/77051860084?text=Меня%20интересует%20породистые%20овцы/лошади/скоты"><Icon3/></a>
                             <a href=""> <Icon4/></a>
-
                         </div>
                     </div>
                 </div>

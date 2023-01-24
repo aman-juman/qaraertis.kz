@@ -90,10 +90,11 @@ const About = () => {
                             <h5 className={styles.contentTopLabel}>{data.label}</h5>
                             <h3 className={styles.contentTopTitle}>"{data.title}"</h3>
                             <h5 className={styles.contentTopSubTitle}>{data.subTitle}</h5>
+                            <h5 className={styles.contentTopPrevDescription}>{data.textLabel}</h5>
                         </div>
                         <p className={styles.contentCenter}>{data.description}</p>
                         <div className={styles.contentBottom}>
-                            <h5 className={styles.contentBottomTitle}>{data.textLabel}</h5>
+                            {/*<h5 className={styles.contentBottomTitle}>{data.textLabel}</h5>*/}
                             <p className={styles.contentBottomDescription}>{data.text}</p>
                         </div>
                         <ul className={styles.iconsBlock}>

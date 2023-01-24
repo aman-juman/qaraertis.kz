@@ -6,6 +6,8 @@ import SheepWoolIcon from "./sheepWool.svg";
 import ScalesIcon from "./scales.svg";
 import SheepHeadIcon from "./sheepHead.svg";
 import SheepIcon from "./sheep.svg";
+import Link from "next/link";
+import {useState} from "react";
 // import SheepImage from "./imageSheep.png";
 
 const advantages = [
@@ -61,9 +63,19 @@ const advantages = [
 // ];
 
 const Product = ({data}) => {
+    const isAdvantages = !!data.advantages;
+    const [showMore, setShowMore] = useState(false);
+    const toggleAdvantagesOpen = () => setShowMore(prev => !prev);
+
     const list = advantages.map((item, i) =>(
         <Card key={i} text={item.text}>{item.icon}</Card>
-    ))
+    ));
+
+    const advantagesList = data.advantages && data.advantages.list.map((item, i) =>(
+        <li key={i}>{item}</li>
+    ));
+
+    console.log(isAdvantages)
     return (
         <div id={data.idName} className={styles.wrap}>
             <div className={styles.imgBlock}>
@@ -80,7 +92,10 @@ const Product = ({data}) => {
                 </div>
                 <div className={styles.contentBlockCenter}>
                     <h3 className={styles.contentTitle}>
-                        {data.title}
+                        <a href={`https://wa.me/77051860084?text=Меня%20интересует%20племенные%20${data.title}`}>
+                            {data.title}
+                        </a>
+
                     </h3>
                     <p className={styles.contentDescription}>
                         {data.description}
@@ -91,6 +106,19 @@ const Product = ({data}) => {
                     <ul className={styles.contentBlockBottomList}>
                         {list}
                     </ul>
+
+                    {
+                        isAdvantages
+                    }
+                    {
+                        data.advantages &&
+                        <div className={styles.additionalText}>
+                            <h5>{data.advantages.title}</h5>
+                            <p>{data.advantages.listTitle}</p>
+                            <ol>{advantagesList}</ol>
+                        </div>
+
+                    }
                 </div>
             </div>
         </div>
@@ -103,6 +131,12 @@ const Card = ({text, children}) =>{
             {children}
             <p className={styles.cardText}>{text}</p>
         </div>
+    )
+};
+
+const MoreInfo = () =>{
+    return(
+        <p></p>
     )
 }
 

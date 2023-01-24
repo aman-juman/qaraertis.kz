@@ -1,7 +1,8 @@
 @import "styles/screen";
 .wrap{
   width: 100%;
-  height: 900px;
+  min-height: 900px;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   @include large{
@@ -92,6 +93,7 @@
     display: flex;
     flex-direction: column;
     align-self: flex-end;
+    padding-top: 70px;
 
     @include medium{
       padding: 0 10px;
@@ -171,7 +173,7 @@
         }
       }
       .contentBlockBottomList{
-        margin-top: 20px;
+        margin: 20px 0;
         width: 80%;
         display: flex;
         justify-content: space-between;
@@ -189,6 +191,40 @@
         }
 
 
+
+      }
+
+      .additionalText{
+        width: 90%;
+
+        @include medium{
+          width: 100%;
+          padding: 0 10px;
+        }
+        h5{
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 1.2;
+          color: var(--green);
+          margin-bottom: 30px;
+        }
+        p{
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 1.2;
+          color: var(--yellow);
+          margin-bottom: 10px;
+        }
+        ol{
+          @include medium{
+            padding: 0 20px;
+          }
+
+          li{
+            margin-bottom: 5px;
+
+          }
+        }
 
       }
     }

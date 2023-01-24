@@ -12,6 +12,9 @@ import img1 from "/public/slide1.jpeg";
 import img2 from "/public/slide2.jpeg";
 import img3 from "/public/slide3.jpeg";
 import img4 from "/public/slide4.jpeg";
+import img5 from "/public/slide5.jpeg";
+import img6 from "/public/slide6.jpeg";
+import img7 from "/public/slide7.jpeg";
 import FarmIcon from "./farmIcon.svg";
 import Arrow from "./arrow.svg";
 
@@ -127,6 +130,40 @@ const Carousel = () => {
                             src={img4} />
                     </div>
                 </SwiperSlide>
+                <SwiperSlide>
+                    <div className={styles.block}>
+                        <Image
+                            className={styles.img}
+                            paceholder="blur"
+                            alt="farm"
+                            quality={80}
+                            loading="lazy"
+                            src={img5} />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={styles.block}>
+                        <Image
+                            className={styles.img}
+                            paceholder="blur"
+                            alt="farm"
+                            quality={80}
+                            loading="lazy"
+                            src={img6} />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={styles.block}>
+                        <Image
+                            className={styles.img}
+                            paceholder="blur"
+                            alt="farm"
+                            quality={80}
+                            loading="lazy"
+                            src={img7} />
+                    </div>
+                </SwiperSlide>
+
                 <div className={styles.top}>
                     <div className={styles.topContent}>
                         <h3 className={styles.topContentTitle}>{data.title}</h3>
