@@ -1,8 +1,24 @@
+@import "styles/screen";
 .wrap{
-  position: relative;
-  box-sizing: border-box !important;
-}
-.player{
-  text-align: center;
+  width: 650px;
+  margin: 0 auto;
 
+
+  @include medium{
+    width: 100vw !important;
+  }
+
+  .title{
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--green);
+    margin-bottom: 20px;
+    font-family: 'Montserrat Alternates', 'sans-serif';
+
+    @include medium{
+      font-size: 2rem;
+    }
+  }
 }
