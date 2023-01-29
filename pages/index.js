@@ -44,8 +44,8 @@ export default function Home() {
         <CeoScreen />
         <WoolScreen />
 
-      <GalleryScreen />
         <YoutubeBlock />
+        <GalleryScreen />
         <CallOrder />
         <Advantage />
         <Footer />
