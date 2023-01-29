@@ -92,6 +92,7 @@ console.log(success)
                         }
 
                         <p className={styles.text}>В рабочее время это заимет не больше 15 минут</p>
+                        <div>{loading ? "LOADING" : null}</div>
                     </div>
                 </div>
             </div>
