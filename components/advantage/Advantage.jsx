@@ -54,7 +54,7 @@ const Advantage = () => {
         </div>
     ))
     return (
-        <section className={styles.section}>
+        <section id="advantages" className={styles.section}>
             <div className="container">
                 <h5 className={styles.label}>{data.label}</h5>
                 <div className={styles.list}>

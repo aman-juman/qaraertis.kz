@@ -52,7 +52,7 @@ const WoolScreen = () => {
     const index = dataBase.findIndex(item => item.language === language);
     const data = dataBase[index]
     return (
-        <section className={styles.section}>
+        <section id="wool" className={styles.section}>
             <div className="container">
                 <div className={styles.cube}>
 

@@ -45,7 +45,7 @@ const CallOrder = () => {
 console.log(success)
 
     return (
-        <section className={styles.section}>
+        <section id="callOrder" className={styles.section}>
             {/*<Image />*/}
             <div className={styles.bg}></div>
             <div className="container">

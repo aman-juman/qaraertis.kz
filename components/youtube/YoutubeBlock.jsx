@@ -19,7 +19,7 @@ export default function YoutubeBlock() {
     const index = dataBase.findIndex(item => item.language === language);
     const data = dataBase[index]
     return (
-        <div className="container">
+        <div id="videoBlock" className="container">
            <div className={styles.wrap}>
               <h3 className={styles.title}>{data.title}</h3>
 

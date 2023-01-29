@@ -31,6 +31,10 @@ const menuArr = [
         name: "Породистые Скоты",
         href: "/#cow"
     },
+    {
+        name: "Галлерея",
+        href: "/#gallery"
+    },
 ]
 const Navbar = () => {
 

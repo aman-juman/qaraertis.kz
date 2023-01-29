@@ -20,6 +20,21 @@ const Menu =(props) => {
             <Link passHref href="/#cow" className="menu-item">
                 Породистые Скоты
             </Link>
+            <Link passHref href="/#wool" className="menu-item">
+                Продажа шерсти
+            </Link>
+            <Link passHref href="/#videoBlock" className="menu-item">
+                Видео блог
+            </Link>
+            <Link passHref href="/#gallery" className="menu-item">
+                Галерея
+            </Link>
+            <Link passHref href="/#callOrder" className="menu-item">
+                Заказать звонок
+            </Link>
+            <Link passHref href="/#advantages" className="menu-item">
+                Достижения
+            </Link>
         </BurgerMenu>
     );
 };

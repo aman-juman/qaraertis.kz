@@ -20,7 +20,7 @@ const GalleryScreen = () =>{
     const handleMoveNext = () => setIndex(nextIndex);
 
     return (
-        <section className={styles.section}>
+        <section id="gallery" className={styles.section}>
             <div className="container">
                 <div className={styles.center}>
                     <h5 className={styles.title}>Галерея</h5>
