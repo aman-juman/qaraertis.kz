@@ -3,7 +3,9 @@ import Image from "next/image";
 import MaskedInput from 'react-input-mask';
 import {useForm, Controller, useFormContext} from "react-hook-form";
 import {useState} from "react";
+import cn from "classnames";
 import preloaderIcon from "./preloader.gif";
+
 
 
 const CallOrder = () => {
@@ -17,11 +19,18 @@ const CallOrder = () => {
     } = useForm();
 
     const [error, setError] = useState(false);
+    const [errorPhone, setErrorPhone] = useState(false);
     const [success, setSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
     const handleInput = ({ target: { value } }) => setPhone(value);
     const onHandleSubmit = data =>{
+        setErrorPhone(false);
         setLoading(true);
+        if(/_/.test(data.phone)){
+            setErrorPhone(true);
+            setLoading(false);
+            return;
+        }
         fetch("/api/order", {
             method: 'POST',
             headers: {'Accept': 'application/json, text/plain', 'Content-Type': 'application/json'},
@@ -32,6 +41,7 @@ const CallOrder = () => {
                 setSuccess(true);
                 setError(false);
                 setLoading(false);
+                setErrorPhone(false);
             }
         }).catch(err => {
 
@@ -42,7 +52,7 @@ const CallOrder = () => {
     }
 
 
-console.log(success)
+// console.log(success)
 
     return (
         <section id="callOrder" className={styles.section}>
@@ -80,7 +90,10 @@ console.log(success)
                                             {(inputProps) => (
                                                 <input
                                                     {...inputProps}
-                                                    className={styles.input}
+                                                    className={cn(styles.input, {
+                                                        [styles.errorInput]: errorPhone
+                                                    })}
+                                                    // className={styles.input}
                                                     type="text"/>
                                             )     }
                                         </MaskedInput>)}

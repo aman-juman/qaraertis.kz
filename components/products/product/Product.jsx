@@ -74,8 +74,6 @@ const Product = ({data}) => {
     const advantagesList = data.advantages && data.advantages.list.map((item, i) =>(
         <li key={i}>{item}</li>
     ));
-
-    console.log(isAdvantages)
     return (
         <div id={data.idName} className={styles.wrap}>
             <div className={styles.imgBlock}>
