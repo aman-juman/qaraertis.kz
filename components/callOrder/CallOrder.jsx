@@ -3,6 +3,7 @@ import Image from "next/image";
 import MaskedInput from 'react-input-mask';
 import {useForm, Controller, useFormContext} from "react-hook-form";
 import {useState} from "react";
+import preloaderIcon from "./preloader.gif";
 
 
 const CallOrder = () => {
@@ -92,7 +93,7 @@ console.log(success)
                         }
 
                         <p className={styles.text}>В рабочее время это заимет не больше 15 минут</p>
-                        <div>{loading ? "LOADING" : null}</div>
+                        <div>{loading ? <Preloader /> : null}</div>
                     </div>
                 </div>
             </div>
@@ -101,3 +102,9 @@ console.log(success)
 };
 
 export default CallOrder;
+
+const Preloader = () => (
+    <div className={styles.preloader}>
+        <div className={styles.loader}></div>
+    </div>
+)
