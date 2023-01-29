@@ -147,11 +147,6 @@ a {
   right: 60px!important;
 
 }
-@media (max-width: #{440px}) {
-  .swiper-button-next:after, .swiper-button-prev:after {
-    display: none;
-  }
-}
 .swiper-button-prev{
   left: 60px!important;
 }
