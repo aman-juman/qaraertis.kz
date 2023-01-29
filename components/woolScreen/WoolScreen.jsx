@@ -1,9 +1,9 @@
 import styles from "./WoolScreen.module.scss";
 import Image from "next/image";
 import img1 from "public/woolProductBaskur.jpg";
-import img2 from "public/wolProductClothes.png";
+import img2 from "public/wolProductClothes.jpg";
 import img3 from "public/woolProductKiizjpg.jpg";
-import img4 from "public/wolProductThread.png";
+import img4 from "public/wolProductThread.jpg";
 import {LanguageContext} from "@/pages";
 import {useContext} from "react";
 
