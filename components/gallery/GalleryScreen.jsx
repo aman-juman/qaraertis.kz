@@ -23,6 +23,7 @@ const GalleryScreen = () =>{
         <section className={styles.section}>
             <div className="container">
                 <div className={styles.center}>
+                    <h5 className={styles.title}>Галерея</h5>
                     <Gallery
                         images={images}
                         onClick={handleClick}

@@ -1,8 +1,25 @@
+@import "styles/screen";
 .section{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--semiGreen);
+  padding: 50px 0;
+
   *{
-    display: flex;
     justify-content: center;
+  }
+  .title{
+
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 20px;
+    font-family: 'Montserrat Alternates', 'sans-serif';
+
+    @include medium{
+      font-size: 2rem;
+    }
   }
 }
