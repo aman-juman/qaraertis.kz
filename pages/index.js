@@ -17,6 +17,8 @@ import {createContext, useState} from "react";
 import YoutubeBlock from "@/components/youtube/YoutubeBlock";
 import WoolScreen from "@/components/woolScreen/WoolScreen";
 import {SEO} from "@/components/layout/SEO";
+import CeoScreen from "@/components/ceoScreen/CeoScreen";
+import GalleryScreen from "@/components/gallery/GalleryScreen";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -39,8 +41,10 @@ export default function Home() {
       <MainScreen />
         <Products />
         <About />
+        <CeoScreen />
         <WoolScreen />
 
+      <GalleryScreen />
         <YoutubeBlock />
         <CallOrder />
         <Advantage />
