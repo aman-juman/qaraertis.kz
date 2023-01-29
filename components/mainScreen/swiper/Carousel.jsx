@@ -1,5 +1,6 @@
 import React, {useContext, useRef, useState} from "react";
 import Image from "next/image";
+import styles from "./Carousel.module.scss";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -7,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import styles from "./Carousel.module.scss";
+
 import img1 from "/public/slide1.jpeg";
 import img2 from "/public/slide2.jpeg";
 import img3 from "/public/slide3.jpeg";
