@@ -42,6 +42,7 @@ export default function Home() {
         </div>
         <Header />
       <MainScreen />
+        <CallOrder />
         <Products />
         <About />
         <CeoScreen />
