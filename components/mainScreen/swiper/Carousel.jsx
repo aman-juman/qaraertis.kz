@@ -90,10 +90,10 @@ const Carousel = () => {
                     <div className={styles.block}>
                         <Image
                             className={styles.img}
-                            paceholder="blur"
+                            // paceholder="blur"
                             alt="farm"
                             quality={80}
-                            loading="lazy"
+                            // loading="lazy"
                             src={img1} />
                     </div>
                 </SwiperSlide>
@@ -101,10 +101,10 @@ const Carousel = () => {
                     <div className={styles.block}>
                         <Image
                             className={styles.img}
-                            paceholder="blur"
+                            // paceholder="blur"
                             alt="farm"
                             quality={80}
-                            loading="lazy"
+                            // loading="lazy"
                             src={img2} />
                     </div>
                 </SwiperSlide>
@@ -112,10 +112,10 @@ const Carousel = () => {
                     <div className={styles.block}>
                         <Image
                             className={styles.img}
-                            paceholder="blur"
+                            // paceholder="blur"
                             alt="farm"
                             quality={80}
-                            loading="lazy"
+                            // loading="lazy"
                             src={img3} />
                     </div>
                 </SwiperSlide>
@@ -123,10 +123,10 @@ const Carousel = () => {
                     <div className={styles.block}>
                         <Image
                             className={styles.img}
-                            paceholder="blur"
+                            // paceholder="blur"
                             alt="farm"
                             quality={80}
-                            loading="lazy"
+                            // loading="lazy"
                             src={img4} />
                     </div>
                 </SwiperSlide>
@@ -134,10 +134,10 @@ const Carousel = () => {
                     <div className={styles.block}>
                         <Image
                             className={styles.img}
-                            paceholder="blur"
+                            // paceholder="blur"
                             alt="farm"
                             quality={80}
-                            loading="lazy"
+                            // loading="lazy"
                             src={img5} />
                     </div>
                 </SwiperSlide>
@@ -145,10 +145,10 @@ const Carousel = () => {
                     <div className={styles.block}>
                         <Image
                             className={styles.img}
-                            paceholder="blur"
+                            // paceholder="blur"
                             alt="farm"
                             quality={80}
-                            loading="lazy"
+                            // loading="lazy"
                             src={img6} />
                     </div>
                 </SwiperSlide>
@@ -156,10 +156,10 @@ const Carousel = () => {
                     <div className={styles.block}>
                         <Image
                             className={styles.img}
-                            paceholder="blur"
+                            // paceholder="blur"
                             alt="farm"
                             quality={80}
-                            loading="lazy"
+                            // loading="lazy"
                             src={img7} />
                     </div>
                 </SwiperSlide>
