@@ -18,7 +18,10 @@ import YoutubeBlock from "@/components/youtube/YoutubeBlock";
 import WoolScreen from "@/components/woolScreen/WoolScreen";
 import {SEO} from "@/components/layout/SEO";
 import CeoScreen from "@/components/ceoScreen/CeoScreen";
-import GalleryScreen from "@/components/gallery/GalleryScreen";
+// import GalleryScreen from "@/components/gallery/GalleryScreen";
+import dynamic from "next/dynamic";
+
+const GalleryScreen = dynamic(() => import("@/components/gallery/GalleryScreen"));
 
 const inter = Inter({ subsets: ['latin'] })
 
