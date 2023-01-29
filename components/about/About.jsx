@@ -82,7 +82,7 @@ const About = () => {
                 <div className={styles.row}>
                     <div className={styles.imgWrap}>
                         <div className={styles.img}>
-                            <Image placeholder="blur" src={img}/>
+                            <Image loading="lazy" placeholder="blur" src={img}/>
                         </div>
                     </div>
                     <div className={styles.content}>

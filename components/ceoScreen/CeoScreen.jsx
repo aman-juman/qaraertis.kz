@@ -22,7 +22,7 @@ export default CeoScreen;
 const Card = ({img, position, fullName}) => {
     return (
         <div className={styles.card}>
-            <div className={styles.img}><Image width={400} src={img} /></div>
+            <div className={styles.img}><Image loading="lazy" placeholder="blur" width={400} src={img} /></div>
             <div className={styles.content}>
                 <h5 className={styles.name}>{fullName}</h5>
                 <p className={styles.status}>{position}</p>

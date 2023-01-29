@@ -82,7 +82,7 @@ const Product = ({data}) => {
                 <div className={styles.imgBlockBgYellow}></div>
                 <div className={styles.imgBlockBgGreen}></div>
                 <div className={styles.img}>
-                    <Image width={500} alt={data.idName} src={data.image} />
+                    <Image loading="lazy" placeholder="blur" width={500} alt={data.idName} src={data.image} />
                 </div>
             </div>
 

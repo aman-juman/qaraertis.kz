@@ -69,7 +69,7 @@ const WoolScreen = () => {
                     {
                         images.map((item, i) => (
                             <div key={i} className={styles.block}>
-                                <Image alt={item.alt} className={styles.img} src={item.url} />
+                                <Image loading="lazy" placeholder="blur"  alt={item.alt} className={styles.img} src={item.url} />
                                 <div className={styles.blockTitleWrap}>
                                     <Card>
                                         <ul className={styles.list}>
