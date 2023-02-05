@@ -76,17 +76,17 @@ const Product = ({data}) => {
                         {list}
                     </ul>
 
+                    {/*{*/}
+                    {/*    isAdvantages*/}
+                    {/*}*/}
                     {
-                        isAdvantages
-                    }
-                    {
-                        // data.advantages ?
-                        // <div className={styles.additionalText}>
-                        //     <h5>{data.advantages.title}</h5>
-                        //     <p>{data.advantages.listTitle}</p>
-                        //     <ol>{advantagesList}</ol>
-                        // </div>
-                        //     : null
+                        data.advantages ?
+                        <div className={styles.additionalText}>
+                            <h5>{data.advantages.title}</h5>
+                            <p>{data.advantages.listTitle}</p>
+                            <ol>{advantagesList}</ol>
+                        </div>
+                            : null
 
                     }
                 </div>
