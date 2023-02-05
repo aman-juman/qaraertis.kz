@@ -39,7 +39,7 @@ const Product = ({data}) => {
         <Card key={i} text={item.text}>{item.icon}</Card>
     ));
 
-    const advantagesList = data.advantages && data.advantages.list.map((item, i) =>(
+    const advantagesList = data?.advantages.list.map((item, i) =>(
         <li key={i}>{item}</li>
     ));
     return (
@@ -77,12 +77,13 @@ const Product = ({data}) => {
                         isAdvantages
                     }
                     {
-                        data.advantages &&
+                        data.advantages ?
                         <div className={styles.additionalText}>
                             <h5>{data.advantages.title}</h5>
                             <p>{data.advantages.listTitle}</p>
                             <ol>{advantagesList}</ol>
                         </div>
+                            : null
 
                     }
                 </div>
