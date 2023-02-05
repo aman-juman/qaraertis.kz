@@ -36,7 +36,10 @@ const Product = ({data}) => {
     const toggleAdvantagesOpen = () => setShowMore(prev => !prev);
 
     const list = advantages.map((item, i) =>(
-        <Card key={i} text={item.text}>{item.icon}</Card>
+        <div key={i} className={styles.card}>
+            {item.icon}
+            <p className={styles.cardText}>{item.text}</p>
+        </div>
     ));
 
     const advantagesList = data.advantages && data.advantages.list.map((item, i) =>(
@@ -92,19 +95,5 @@ const Product = ({data}) => {
     );
 };
 
-const Card = ({text, children}) =>{
-    return (
-        <div className={styles.card}>
-            {children}
-            <p className={styles.cardText}>{text}</p>
-        </div>
-    )
-};
-
-const MoreInfo = () =>{
-    return(
-        <p></p>
-    )
-}
 
 export default Product;
