@@ -37,12 +37,12 @@ const Product = ({data}) => {
 
     const list = advantages.map((item, i) =>(
         <div key={i} className={styles.card}>
-            {item.icon}
+            {/*{item.icon}*/}
             <p className={styles.cardText}>{item.text}</p>
         </div>
     ));
 
-    const advantagesList = data.advantages && data.advantages.list.map((item, i) =>(
+    const advantagesList = isAdvantages && data.advantages.list.map((item, i) =>(
         <li key={i}>{item}</li>
     ));
     return (
@@ -75,10 +75,6 @@ const Product = ({data}) => {
                     <ul className={styles.contentBlockBottomList}>
                         {list}
                     </ul>
-
-                    {/*{*/}
-                    {/*    isAdvantages*/}
-                    {/*}*/}
                     {
                         data.advantages ?
                         <div className={styles.additionalText}>
