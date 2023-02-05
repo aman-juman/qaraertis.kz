@@ -28,39 +28,7 @@ const advantages = [
         icon: <SheepHeadIcon />,
     },
 ];
-// const data = {
-//     idName: "sheep",
-//     label: "ЗНАМЕНИТАЯ ПОРОДА ОВЕЦ",
-//     title: "БАЙЫС",
-//     description: "Новая казахская курдючная полугрубошерстная порода типа «Байыс» была апробирована в 1994 году.",
-//     image: SheepImage,
-// }
-// const data =[
-//     {
-//         language: "ru",
-//         idName: "sheep",
-//         label: "ЗНАМЕНИТАЯ ПОРОДА ОВЕЦ",
-//         title: "БАЙЫС",
-//         description: "Новая казахская курдючная полугрубошерстная порода типа «Байыс» была апробирована в 1994 году.",
-//         image: "./imageSheep.png",
-//     },
-//     {
-//         language: "ru",
-//         idName: "horse",
-//         label: "ЗНАМЕНИТАЯ ПОРОДА ЛОШАДЕЙ",
-//         title: "ЖАБЫ",
-//         description: "Одна из старейших пород казахских лошадей, самые крупные представители казахской породы",
-//         image: "./horseImg.jpg",
-//     },
-//     {
-//         language: "ru",
-//         idName: "cow",
-//         label: "ЗНАМЕНИТАЯ ПОРОДА КОРОВ",
-//         title: "КАЗАХСКАЯ БЕЛОГОЛОВАЯ",
-//         description: "Это символ мясного животноводства Казахстана и широко распространена на территории нашей страны",
-//         image: "./cowImg.jpg",
-//     },
-// ];
+
 
 const Product = ({data}) => {
     const isAdvantages = !!data.advantages;

@@ -4,7 +4,6 @@ import MaskedInput from 'react-input-mask';
 import {useForm, Controller, useFormContext} from "react-hook-form";
 import {useState} from "react";
 import cn from "classnames";
-import preloaderIcon from "./preloader.gif";
 
 
 
