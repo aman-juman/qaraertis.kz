@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./Product.module.scss";
 
 import MeatIcon from "./meat.svg";
-import SheepWoolIcon from "./sheepWool.svg";
+// import SheepWoolIcon from "./sheepWool.svg";
 import ScalesIcon from "./scales.svg";
 import SheepHeadIcon from "./sheepHead.svg";
 import SheepIcon from "./sheep.svg";
@@ -37,7 +37,7 @@ const Product = ({data}) => {
 
     const list = advantages.map((item, i) =>(
         <div key={i} className={styles.card}>
-            {/*{item.icon}*/}
+            {item.icon}
             <p className={styles.cardText}>{item.text}</p>
         </div>
     ));
