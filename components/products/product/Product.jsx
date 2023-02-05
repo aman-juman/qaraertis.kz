@@ -39,7 +39,7 @@ const Product = ({data}) => {
         <Card key={i} text={item.text}>{item.icon}</Card>
     ));
 
-    const advantagesList = data?.advantages.list.map((item, i) =>(
+    const advantagesList = data.advantages && data.advantages.list.map((item, i) =>(
         <li key={i}>{item}</li>
     ));
     return (
