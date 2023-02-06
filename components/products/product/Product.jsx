@@ -64,7 +64,6 @@ const Product = ({data}) => {
                         <a href={`https://wa.me/77051860084?text=Меня%20интересует%20племенные%20${data.title}`}>
                             {data.title}
                         </a>
-
                     </h3>
                     <p className={styles.contentDescription}>
                         {data.description}
