@@ -83,7 +83,6 @@ const Product = ({data}) => {
                             <ol>{advantagesList}</ol>
                         </div>
                             : null
-
                     }
                 </div>
             </div>
