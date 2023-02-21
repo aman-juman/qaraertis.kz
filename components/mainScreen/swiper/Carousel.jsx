@@ -20,7 +20,7 @@ import FarmIcon from "./farmIcon.svg";
 import Arrow from "./arrow.svg";
 
 // import required modules
-import {Autoplay, Pagination, Navigation, EffectFade} from "swiper";
+import {Autoplay, Pagination, Navigation} from "swiper";
 import Link from "next/link";
 import {LanguageContext} from "@/pages";
 
@@ -77,14 +77,13 @@ const Carousel = () => {
         <>
             <Swiper
                 spaceBetween={30}
-                effect={"fade"}
                 centeredSlides={true}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
                 navigation={true}
-                modules={[EffectFade, Autoplay, Navigation]}
+                modules={[Autoplay, Navigation]}
                 className="mySwiper"
                 loop={true}
             >
