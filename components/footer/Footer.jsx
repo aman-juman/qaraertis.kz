@@ -34,7 +34,7 @@ const Footer = () => {
                             fontSize: "14px",
                             textDecoration: "underline",
                             fontWeight: "bold"
-                        }} href="https://wa.me/77064107828?text=Я%20хочу%20Заказать%20сайт">Разработка сайта</a>
+                        }} href="https://www.ustudio.kz/">Разработка сайта - Ustudio</a>
                         <p>Наши социальные сети</p>
                         <div className={styles.socials}>
                             <a href="https://www.google.com/maps/place/FVCG%2BP5G,+Zaysan+070000/@47.4722644,84.8759043,19z/data=!4m13!1m7!3m6!1s0x42bd37bb2a54b50d:0xf98f0182ee604f5d!2z0JzQsNC70LTRi9Cx0LDQtdCyINC606nRiNC10YHRliwgWmF5c2FuIDA3MDAwMA!3b1!8m2!3d47.4718075!4d84.8749602!3m4!1s0x42bd370b29a6b9b5:0x7b8d0b271cb8db09!8m2!3d47.471784!4d84.8754856"> <Icon1/></a>
